@@ -1,4 +1,4 @@
-## Bem-vindo(a) ao perfil do André Queiroz😁
+## Bem-vindo(a) ao meu perfil😁
 
  <div>
    <a href="https://github.com/777SevenSeven">
