@@ -5,7 +5,7 @@
    <a href="https://github.com/777SevenSeven">
    <img height="180em" src="https://github-readme-stats.vercel.app/api?username=777SevenSeven&show_icons=true&theme=dark&include_all_commits=true&count_private=true"/>
    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=777SevenSeven&layout=compact&langs_count=6&theme=dark"/>
-   <img alt="Gif sorrindo" height="180em" width="180em" src="https://s13.gifyu.com/images/S0oXd.gif">
+   <img alt="Gif sorrindo" height="180em" width="180em" src="https://s13.gifyu.com/images/S0oe7.gif">
 </div>
     
 <div style="display: inline_block"><br>
