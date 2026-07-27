@@ -8,9 +8,5 @@
 
   <br><br>
 
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=777SevenSeven&layout=donut&theme=tokyonight&hide_border=true" height="210px" alt="Telemetria de Código Real">
-
-  <br><br>
-
   🏢 **Computer Engineering Undergraduate @ UTFPR (Class of 2027)** | 🚀 **Founder @ Focus Shark** | 🛡️ **President @ CyberGuard**
 </div>
