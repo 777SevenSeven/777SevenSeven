@@ -19,7 +19,27 @@ async def capture_badge(badge_url: str, output_path: str):
             device_scale_factor=2
         )
         print(f"Fetching badge from: {badge_url}")
-        await page.goto(badge_url, wait_until="networkidle", timeout=30000)
+        response = await page.goto(badge_url, wait_until="domcontentloaded", timeout=30000)
+
+        # TryHackMe sits behind Vercel's anti-bot checkpoint. Datacenter IPs
+        # (e.g. GitHub-hosted runners) get a challenge page instead of the
+        # badge. Detect it and abort WITHOUT writing, so the last good badge
+        # stays in the repo.
+        for _ in range(10):
+            await asyncio.sleep(2)
+            title = (await page.title()).lower()
+            content = (await page.content()).lower()
+            if "vercel security checkpoint" in title or "vercel security checkpoint" in content:
+                print("ERROR: Vercel Security Checkpoint detected — TryHackMe is blocking this IP.")
+                print("HINT: run update_badge.py from a residential connection instead of CI.")
+                await browser.close()
+                sys.exit(2)
+            if "tryhackme" in title:
+                break
+        if response is not None and response.status == 429:
+            print("ERROR: HTTP 429 from TryHackMe — rate limited / checkpoint.")
+            await browser.close()
+            sys.exit(2)
         await asyncio.sleep(2)
         
         await page.screenshot(path=output_path, omit_background=True)

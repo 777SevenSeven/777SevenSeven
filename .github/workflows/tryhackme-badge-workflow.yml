@@ -1,8 +1,11 @@
 name: TryHackMe Update Badge
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
+  # TryHackMe protege o embed da badge com Vercel Security Checkpoint, que
+  # bloqueia IPs de datacenter (runners do GitHub). O agendamento diário foi
+  # desativado: a badge é atualizada localmente via tools/update_thm_badge.ps1
+  # + Agendador de Tarefas do Windows. Este workflow resta apenas para uso
+  # manual em caso de a proteção ser removida.
   workflow_dispatch:
     inputs:
       badge_url:
