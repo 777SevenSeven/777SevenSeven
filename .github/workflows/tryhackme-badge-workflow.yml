@@ -4,23 +4,47 @@ on:
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:
+    inputs:
+      user_public_id:
+        description: 'TryHackMe userPublicId (ID numérico do iframe do badge)'
+        required: false
+        default: ''
 
 permissions:
   contents: write
 
 jobs:
-  tryhackme-badge-update:
+  update-badge:
     name: Update TryHackMe Badge
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: TryHackMe Badge Workflow
-        uses: p4p1/tryhackme-badge-workflow@main
-        env:
-          ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: 'true'
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          username: "andreQueiroz"
-          image_path: "./assets/thm_propic.png"
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          python-version: '3.11'
+
+      - name: Install Playwright
+        run: |
+          pip install playwright
+          playwright install --with-deps chromium
+
+      - name: Generate TryHackMe Badge
+        env:
+          THM_USER_PUBLIC_ID: ${{ inputs.user_public_id || secrets.THM_USER_PUBLIC_ID }}
+        run: |
+          python .github/scripts/update_badge.py --output assets/thm_propic.png
+
+      - name: Commit and Push Badge
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/thm_propic.png
+          if git diff --staged --quiet; then
+            echo "No changes in badge."
+          else
+            git commit -m "chore(badge): update TryHackMe badge"
+            git push origin main
+          fi
