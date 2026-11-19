@@ -1,10 +1,73 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="480" height="150" viewBox="0 0 480 150" role="img" aria-label="TryHackMe profile andreQueiroz">
-  <rect width="480" height="150" rx="12" fill="#0d1117"/>
-  <rect x="1" y="1" width="478" height="148" rx="11" fill="#161b22" stroke="#30363d"/>
-  <circle cx="34" cy="34" r="14" fill="#64ffda" opacity="0.15"/>
-  <text x="34" y="40" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="800" fill="#64ffda">THM</text>
-  <text x="58" y="32" font-family="Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#e6edf3">TryHackMe</text>
-  <text x="58" y="48" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#8b949e">TOP 9% · Silver · @andreQueiroz</text>
-  <line x1="24" y1="66" x2="456" y2="66" stroke="#30363d"/>
-  <text x="24" y="58" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#8b949e" letter-spacing="1">LEVEL</text><text x="24" y="80" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#64ffda">8</text><text x="124" y="58" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#8b949e" letter-spacing="1">POINTS</text><text x="124" y="80" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#e6edf3">4.886</text><text x="224" y="58" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#8b949e" letter-spacing="1">ROOMS</text><text x="224" y="80" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#58a6ff">49</text><text x="324" y="58" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#8b949e" letter-spacing="1">BADGES</text><text x="324" y="80" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#d2a8ff">6</text><text x="404" y="58" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#8b949e" letter-spacing="1">STREAK</text><text x="404" y="80" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#ffa657">9d</text>
+  <defs>
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161b22" />
+      <stop offset="100%" stop-color="#0d1117" />
+    </linearGradient>
+    <linearGradient id="accent-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#64ffda" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#58a6ff" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#30363d" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo e Borda -->
+  <rect width="480" height="150" rx="12" fill="#0d1117" />
+  <rect x="1" y="1" width="478" height="148" rx="11" fill="url(#card-bg)" stroke="#30363d" stroke-width="1" />
+
+  <!-- Cabeçalho -->
+  <g transform="translate(24, 20)">
+    <rect width="34" height="34" rx="8" fill="#64ffda" fill-opacity="0.12" stroke="#64ffda" stroke-opacity="0.3" stroke-width="1" />
+    <text x="17" y="21" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="800" fill="#64ffda" letter-spacing="0.5">THM</text>
+    
+    <text x="46" y="15" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#e6edf3">TryHackMe</text>
+    <text x="46" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#8b949e">
+      <tspan fill="#64ffda" font-weight="600">TOP 9%</tspan> · Silver · @andreQueiroz
+    </text>
+
+    <!-- Badge de Rank/Status à direita -->
+    <rect x="364" y="5" width="68" height="22" rx="11" fill="#21262d" stroke="#30363d" stroke-width="1" />
+    <circle cx="376" cy="16" r="3.5" fill="#64ffda" />
+    <text x="385" y="20" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#c9d1d9">Active</text>
+  </g>
+
+  <!-- Linha Divisória -->
+  <line x1="24" y1="68" x2="456" y2="68" stroke="url(#accent-line)" stroke-width="1" />
+
+  <!-- Grid de Estatísticas (5 colunas bem distribuídas) -->
+  <g transform="translate(24, 90)" font-family="Segoe UI, Arial, sans-serif">
+    <!-- Coluna 1: LEVEL -->
+    <g transform="translate(0, 0)">
+      <text x="0" y="0" font-size="10" font-weight="600" fill="#8b949e" letter-spacing="1.2">LEVEL</text>
+      <text x="0" y="24" font-size="22" font-weight="700" fill="#64ffda">8</text>
+    </g>
+
+    <!-- Coluna 2: POINTS -->
+    <g transform="translate(86, 0)">
+      <text x="0" y="0" font-size="10" font-weight="600" fill="#8b949e" letter-spacing="1.2">POINTS</text>
+      <text x="0" y="24" font-size="22" font-weight="700" fill="#e6edf3">4.886</text>
+    </g>
+
+    <!-- Coluna 3: ROOMS -->
+    <g transform="translate(192, 0)">
+      <text x="0" y="0" font-size="10" font-weight="600" fill="#8b949e" letter-spacing="1.2">ROOMS</text>
+      <text x="0" y="24" font-size="22" font-weight="700" fill="#58a6ff">49</text>
+    </g>
+
+    <!-- Coluna 4: BADGES -->
+    <g transform="translate(284, 0)">
+      <text x="0" y="0" font-size="10" font-weight="600" fill="#8b949e" letter-spacing="1.2">BADGES</text>
+      <text x="0" y="24" font-size="22" font-weight="700" fill="#d2a8ff">6</text>
+    </g>
+
+    <!-- Coluna 5: STREAK -->
+    <g transform="translate(374, 0)">
+      <text x="0" y="0" font-size="10" font-weight="600" fill="#8b949e" letter-spacing="1.2">STREAK</text>
+      <text x="0" y="24" font-size="22" font-weight="700" fill="#ffa657">9d</text>
+    </g>
+  </g>
+
+  <!-- Barra decorativa inferior -->
+  <rect x="24" y="132" width="432" height="3" rx="1.5" fill="#21262d" />
+  <rect x="24" y="132" width="393" height="3" rx="1.5" fill="#64ffda" opacity="0.7" />
 </svg>
