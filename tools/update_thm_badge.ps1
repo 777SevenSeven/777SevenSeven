@@ -8,13 +8,13 @@ $ErrorActionPreference = "Stop"
 $repo = "C:\Users\André Antonio\Downloads\777SevenSeven"
 Set-Location $repo
 
-python .github\scripts\update_thm_svg.py
+python .github\scripts\update_thm_badge.py
 if ($LASTEXITCODE -ne 0) {
     Write-Host "Badge update failed (exit $LASTEXITCODE) — keeping previous image."
     exit $LASTEXITCODE
 }
 
-git add assets\thm_badge.svg
+git add assets\thm_propic.png assets\thm_badge.svg README.md
 $staged = git diff --staged --quiet
 if ($LASTEXITCODE -eq 0) {
     Write-Host "No badge changes."
