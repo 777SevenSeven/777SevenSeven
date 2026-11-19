@@ -53,8 +53,6 @@ Hands-on security research, controlled lab environments and technical training.
 [![TryHackMe Profile](https://raw.githubusercontent.com/777SevenSeven/777SevenSeven/main/assets/thm_propic.png)](https://tryhackme.com/p/andreQueiroz)
 
 **Training & Credentials**
-
-- Cisco CyberEducation Scholar
 - [TryHackMe Profile](https://tryhackme.com/p/andreQueiroz) — Practical cybersecurity labs and progress.
 
 **DIO Cybersecurity Labs**
