@@ -99,5 +99,3 @@ Hands-on em ambientes reais de teste — do laboratório de malware em Python ao
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=777SevenSeven&layout=compact&theme=radical" alt="Top Langs"/>
   </a>
 </p>
-
-<sub>Painel autogerenciado com GitHub Actions — "Automação contínua como reflexo de evolução constante."</sub>
