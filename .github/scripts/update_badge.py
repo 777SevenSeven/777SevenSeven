@@ -14,7 +14,6 @@ async def capture_badge(badge_url: str, output_path: str):
             headless=True,
             args=["--no-sandbox", "--disable-setuid-sandbox"]
         )
-        # 400x172 matches TryHackMe iframe exact dimensions, device_scale_factor=2 produces crisp retina image
         page = await browser.new_page(
             viewport={"width": 400, "height": 172},
             device_scale_factor=2
@@ -34,8 +33,12 @@ async def capture_badge(badge_url: str, output_path: str):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--url", default=os.getenv("THM_BADGE_URL", DEFAULT_BADGE_URL))
+    parser.add_argument("--url", default="")
     parser.add_argument("--output", default="assets/thm_propic.png")
     args = parser.parse_args()
     
-    asyncio.run(capture_badge(args.url, args.output))
+    env_url = (os.getenv("THM_BADGE_URL") or "").strip()
+    arg_url = (args.url or "").strip()
+    badge_url = arg_url or env_url or DEFAULT_BADGE_URL
+    
+    asyncio.run(capture_badge(badge_url, args.output))
