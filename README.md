@@ -26,7 +26,7 @@
   </p>
 
   <a href="https://tryhackme.com/p/andreQueiroz" target="_blank">
-    <img src="https://raw.githubusercontent.com/777SevenSeven/777SevenSeven/main/assets/thm_propic.png" alt="TryHackMe Badge" width="320" />
+    <img src="https://raw.githubusercontent.com/777SevenSeven/777SevenSeven/main/assets/thm_badge.svg" alt="TryHackMe Stats" width="480" />
   </a>
 
   <br><br>
