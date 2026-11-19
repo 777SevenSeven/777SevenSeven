@@ -8,5 +8,11 @@
 
   <br><br>
 
+  <a href="https://tryhackme.com/p/andreQueiroz" target="_blank">
+    <img src="https://raw.githubusercontent.com/777SevenSeven/777SevenSeven/main/assets/thm_propic.png" alt="TryHackMe Badge" />
+  </a>
+
+  <br><br>
+
   🏢 **Computer Engineering Undergraduate @ UTFPR (Class of 2027)** | 🚀 **Founder @ Focus Shark** | 🛡️ **President @ CyberGuard**
 </div>

@@ -1,0 +1,26 @@
+name: TryHackMe Update Badge
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  tryhackme-badge-update:
+    name: Update TryHackMe Badge
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: TryHackMe Badge Workflow
+        uses: p4p1/tryhackme-badge-workflow@main
+        env:
+          ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: 'true'
+        with:
+          username: "andreQueiroz"
+          image_path: "./assets/thm_propic.png"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
