@@ -26,7 +26,7 @@
 
 ---
 
-## �️ 01. Produto em Destaque — DevTools Enabler
+## 🏅 01. Produto em Destaque — DevTools Enabler
 
 Extensão **Manifest V3**, local-first e sem coleta de dados, que impede sites de bloquear DevTools (F12), menu de contexto e seleção de texto — com um clique, zero desperdício de CPU.
 
@@ -71,7 +71,6 @@ Progresso em laboratórios hands-on e ambientes controlados de teste.
 
 - 🔬 [dio-malware-simulation-python](https://github.com/777SevenSeven/dio-malware-simulation-python) — simulação de Trojan/Keylogger com exfiltração via Telegram e análise de defesas
 - 🎯 [dio-smb-credential-exploit](https://github.com/777SevenSeven/dio-smb-credential-exploit) — ciclo de invasão (recon + exploração) em Metasploitable 2
-- 🏅 Cisco CyberEducation Scholar
 
 ---
 
