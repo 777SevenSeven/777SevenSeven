@@ -1,5 +1,3 @@
-# ⚡ André Antonio da Silva Queiroz
-
 **Product Management | Software Engineering | MVP Execution**
 
 [![DevTools Enabler](https://img.shields.io/badge/DevTools_Enabler-Live_in_3_Browser_Stores-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/devtools-enabler/pbnlbadpeblgajhidiopfbfpmkegamfh)
@@ -55,12 +53,9 @@ Hands-on security research, controlled lab environments and technical training.
 **Training & Credentials**
 - [TryHackMe Profile](https://tryhackme.com/p/andreQueiroz) — Practical cybersecurity labs and progress.
 
-**DIO Cybersecurity Labs**
+**Practical Projects & Labs**
 
-Consolidated practical exercises from the DIO cybersecurity training program.
-
-- [Python Malware Simulation](https://github.com/777SevenSeven/dio-malware-simulation-python) — Trojan/Keylogger simulation and defensive analysis.
-- [SMB Credential Exploitation](https://github.com/777SevenSeven/dio-smb-credential-exploit) — Reconnaissance and exploitation in a controlled Metasploitable 2 environment.
+- [DIO Cybersecurity Bootcamp](https://github.com/777SevenSeven/dio-cybersecurity-bootcamp) — Documented practical exercises and cybersecurity labs developed throughout the training program.
 
 ---
 
